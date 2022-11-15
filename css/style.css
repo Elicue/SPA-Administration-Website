@@ -1,0 +1,992 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300;500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: color(noir);
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+}
+
+body {
+  background-color: #fdf3ed;
+  position: relative;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: #fffaf7;
+  border-bottom: solid 1px #222222;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+header nav .logo {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+header nav .logo img {
+  width: 40%;
+}
+header nav .menu {
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .menu li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  width: 35%;
+}
+header nav .menu li img {
+  width: 10%;
+  margin-right: 15px;
+}
+header nav .menu li a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: capitalize;
+  width: 80%;
+}
+header nav .menu li ion-icon {
+  width: 100%;
+}
+header nav .menu li:nth-child(2) {
+  margin-right: -10%;
+}
+header nav .menu li:nth-child(3) {
+  margin-right: -15%;
+  cursor: default;
+}
+header nav .menu li:nth-child(3) a {
+  color: #fffaf7;
+}
+header nav .menu li:nth-child(3) img {
+  display: none;
+}
+header nav .menu li:nth-child(4) {
+  margin-right: -5%;
+  cursor: default;
+}
+header nav .menu li:nth-child(4) a {
+  color: #fffaf7;
+}
+header nav .menu li:nth-child(4) ion-icon {
+  color: #fffaf7;
+}
+header nav .perso {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav .perso a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #222222;
+  text-decoration: none;
+}
+header nav .perso a ion-icon {
+  color: #222222;
+  width: 25px;
+  height: 25px;
+}
+header nav .perso a .search {
+  padding-left: 15px;
+  border-left: #eb651c 1px solid;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  background-color: #eb9118;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: -10vh;
+  z-index: 9;
+}
+.infos a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.infos .content {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  width: 43%;
+  justify-content: space-between;
+  font-weight: 300;
+}
+.infos .content ion-icon {
+  width: 25px;
+  height: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10vh;
+  background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2022/09/SPA_ASTRO_CHIEN_11_VERSEAU_BANDEAU_SITE_1366x483.png");
+  background-repeat: none;
+  background-size: cover;
+  height: 60vh;
+}
+main .content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-weight: 100;
+  width: 30%;
+  margin: auto 0;
+  margin-left: 15vh;
+  justify-content: space-around;
+  height: 50%;
+}
+main .content h1 {
+  font-size: 58px;
+}
+main .content p {
+  font-size: 20px;
+}
+
+.formulaire {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 10vh;
+}
+.formulaire .haut {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 85%;
+}
+.formulaire .haut .left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  position: relative;
+}
+.formulaire .haut .left .content {
+  width: 80%;
+  margin: auto;
+}
+.formulaire .haut .left .content h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  line-height: 70px;
+}
+.formulaire .haut .left .content p {
+  font-weight: 100;
+  font-size: 20px;
+  width: 80%;
+}
+.formulaire .haut .left img {
+  width: 30%;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-30deg);
+  top: 15%;
+  left: 0;
+  opacity: 20%;
+}
+.formulaire .haut .right {
+  width: 50%;
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.formulaire .haut .right .fond {
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../images/blob.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: rotateY(180deg);
+}
+.formulaire .haut .right form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-around;
+  width: 80%;
+}
+.formulaire .haut .right form h1 {
+  margin-bottom: 5vh;
+  font-size: 50px;
+}
+.formulaire .haut .right form input {
+  border: 1px #222222 solid;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 20px;
+}
+.formulaire .haut .right form input[type=submit] {
+  width: 30%;
+  background-color: #eb651c;
+  color: #fff;
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.formulaire .haut .right form input::-moz-placeholder {
+  color: rgb(123, 123, 123);
+}
+.formulaire .haut .right form input:-ms-input-placeholder {
+  color: rgb(123, 123, 123);
+}
+.formulaire .haut .right form input::placeholder {
+  color: rgb(123, 123, 123);
+}
+.formulaire .bas {
+  width: 100%;
+  display: flex;
+}
+.formulaire .bas h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 40px;
+  margin: auto;
+  width: 20%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/10/Djoko_Mylene_Chat.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110vh;
+  margin-bottom: -10vh;
+}
+.bottom a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.bottom .content {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  margin: auto;
+  justify-content: space-around;
+}
+.bottom .content .left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 80%;
+  color: #fff;
+  justify-content: space-around;
+  margin-left: 10vh;
+}
+.bottom .content .left h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 68px;
+}
+.bottom .content .left p {
+  font-weight: 100;
+  font-size: 20px;
+  width: 80%;
+}
+.bottom .content .right {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.donation {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 9;
+}
+.donation button {
+  display: flex;
+  flex-direction: row;
+  background-color: #eb651c;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem;
+  justify-content: center;
+}
+.donation button img {
+  width: 20%;
+  margin-right: 2vh;
+}
+.donation button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.admin {
+  margin-top: 15vh;
+  width: 100%;
+  background-color: #fdf3ed;
+  display: flex;
+  flex-direction: column;
+}
+.admin .content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  min-height: 40vh;
+  position: relative;
+}
+.admin .content .left {
+  width: 50%;
+}
+.admin .content .left .card {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  width: 90%;
+  margin-top: 5vh;
+  border: 1px solid #222222;
+  border-radius: 20px;
+  position: relative;
+  min-height: 20vh;
+  background-color: #fffaf7;
+}
+.admin .content .left .card .txt {
+  width: 70%;
+}
+.admin .content .left .card .txt h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  margin-bottom: 2vh;
+}
+.admin .content .left .card .txt a {
+  color: #222222;
+}
+.admin .content .left .card .txt p {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 2vh;
+}
+.admin .content .left .card .fond {
+  width: 30%;
+}
+.admin .content .left .card .fond img {
+  position: absolute;
+  width: 15%;
+  transform: rotate(30deg);
+  opacity: 20%;
+  top: 8%;
+  left: 35%;
+}
+.admin .content .right {
+  position: fixed;
+  left: 50%;
+  width: 50%;
+}
+.admin .content .right img {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+}
+
+.adm {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  left: 2%;
+  bottom: 5%;
+  z-index: 9;
+}
+.adm .content {
+  background-color: #eb651c;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  left: 2%;
+  bottom: 5%;
+  z-index: 9;
+}
+.adm a {
+  color: #fff;
+}
+
+.dpt {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  right: 10%;
+  bottom: 10%;
+  z-index: 9;
+}
+.dpt .content {
+  background-color: #eb651c;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  left: 12%;
+  bottom: 5%;
+  z-index: 9;
+}
+.dpt a {
+  color: #fff;
+}
+.dpt img {
+  width: 15px;
+  height: 15px;
+}
+
+.account {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.account .bandeau {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  margin-top: 10vh;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #fffaf7;
+}
+.account .bandeau section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 80%;
+  margin: auto;
+}
+.account .bandeau section .txt {
+  display: flex;
+  flex-direction: column;
+}
+.account .bandeau section .txt h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+}
+.account .bandeau section .txt p {
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.69;
+  letter-spacing: 1.95px;
+  text-transform: uppercase;
+}
+.account .bandeau section img {
+  width: 30%;
+}
+.account .bandeau section:nth-child(4) img {
+  width: 20%;
+}
+.account .bas {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: -15vh;
+  height: 90vh;
+}
+.account .bas .left {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  margin-top: 10vh;
+}
+.account .bas .left img {
+  width: 30%;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-30deg);
+  top: 0%;
+  left: 0%;
+  opacity: 20%;
+}
+.account .bas .left .txt {
+  width: 80%;
+  margin: auto;
+  height: 80%;
+  justify-content: space-around;
+}
+.account .bas .left .txt h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  line-height: 70px;
+}
+.account .bas .left .txt p {
+  margin-top: 5vh;
+  font-weight: 100;
+  font-size: 20px;
+  width: 80%;
+}
+.account .bas .right {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  height: 100%;
+}
+.account .bas .right .fond {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../images/blob.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+  z-index: -1;
+  top: -10%;
+}
+.account .bas .right form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 10vh;
+}
+.account .bas .right form h1 {
+  margin-bottom: 5vh;
+  font-size: 50px;
+}
+.account .bas .right form input {
+  border: 1px #222222 solid;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 20px;
+}
+.account .bas .right form input[type=submit] {
+  width: 40%;
+  background-color: #eb651c;
+  color: #fff;
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.account .bas .right form input::-moz-placeholder {
+  color: rgb(123, 123, 123);
+}
+.account .bas .right form input:-ms-input-placeholder {
+  color: rgb(123, 123, 123);
+}
+.account .bas .right form input::placeholder {
+  color: rgb(123, 123, 123);
+}
+.account .deux {
+  margin-top: 20vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://boutique-solidaire.com/la-spa/themes/SPA/img/Block-Home-Cadon.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.account .deux a {
+  width: 100%;
+  height: 100%;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+}
+.connect .content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  margin: auto;
+  margin-top: 15vh;
+}
+.connect .content .haut {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 10vh;
+}
+.connect .content .haut .left {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  height: 100%;
+}
+.connect .content .haut .left .fond {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../images/blob.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  top: -10%;
+}
+.connect .content .haut .left form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 10vh;
+}
+.connect .content .haut .left form h1 {
+  margin-bottom: 5vh;
+  font-size: 50px;
+}
+.connect .content .haut .left form input {
+  border: 1px #222222 solid;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 20px;
+}
+.connect .content .haut .left form input[type=submit] {
+  width: 40%;
+  background-color: #eb651c;
+  color: #fff;
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.connect .content .haut .left form input::-moz-placeholder {
+  color: rgb(123, 123, 123);
+}
+.connect .content .haut .left form input:-ms-input-placeholder {
+  color: rgb(123, 123, 123);
+}
+.connect .content .haut .left form input::placeholder {
+  color: rgb(123, 123, 123);
+}
+.connect .content .haut .right {
+  width: 45%;
+  height: 100%;
+}
+.connect .content .haut .right img {
+  width: 20%;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(30deg);
+  top: 8%;
+  right: 5%;
+  opacity: 20%;
+}
+.connect .content .haut .right .txt {
+  width: 80%;
+  margin: auto;
+  height: 80%;
+  justify-content: space-around;
+}
+.connect .content .haut .right .txt h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  line-height: 70px;
+}
+.connect .content .haut .right .txt p {
+  margin-top: 5vh;
+  font-weight: 100;
+  font-size: 20px;
+  width: 80%;
+}
+
+.sous {
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/cat_g.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sous .content {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+.sous .content .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sous .content .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sous .content .right img {
+  width: 30%;
+  position: absolute;
+  opacity: 20%;
+  transform: rotate(-30deg);
+  top: -5vh;
+  left: -5vh;
+}
+.sous .content .right .txt {
+  width: 80%;
+  margin: auto;
+  margin-top: -5%;
+}
+.sous .content .right .txt h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  line-height: 70px;
+}
+.sous .content .right .txt p {
+  margin-top: 5vh;
+  font-weight: 100;
+  font-size: 20px;
+  width: 80%;
+}
+
+.mypets {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  width: 100%;
+  background-color: #fdf3ed;
+  display: flex;
+  flex-direction: column;
+}
+.mypets .card {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  width: 40%;
+  margin-top: 5vh;
+  border: 1px solid #222222;
+  border-radius: 20px;
+  position: relative;
+  min-height: 20vh;
+  background-color: #fffaf7;
+  margin-left: 10vh;
+}
+.mypets .card .txt {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.mypets .card .txt h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
+.mypets .card .txt a {
+  color: #222222;
+}
+.mypets .card .txt p {
+  font-size: 20px;
+  font-weight: 100;
+}
+.mypets .card .fond {
+  width: 30%;
+}
+.mypets .card .fond img {
+  position: absolute;
+  width: 15%;
+  transform: rotate(30deg);
+  opacity: 20%;
+  top: 8%;
+  left: 8%;
+}
+.mypets .right {
+  position: fixed;
+  left: 50%;
+  width: 45%;
+  top: 20vh;
+}
+.mypets .right img {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+}
+.mypets .content {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+}
+.mypets .content .left {
+  position: relative;
+  width: 45%;
+  left: 10vh;
+}
+.mypets .content .left .card {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  width: 60%;
+  margin-top: 5vh;
+  border: 1px solid #222222;
+  border-radius: 20px;
+  position: relative;
+  min-height: 20vh;
+  background-color: #fffaf7;
+}
+.mypets .content .left .card .txt {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.mypets .content .left .card .txt h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
+.mypets .content .left .card .txt a {
+  color: #222222;
+}
+.mypets .content .left .card .txt p {
+  font-size: 20px;
+  font-weight: 100;
+}
+.mypets .content .left .card .fond {
+  width: 30%;
+}
+.mypets .content .left .card .fond img {
+  position: absolute;
+  width: 15%;
+  transform: rotate(30deg);
+  opacity: 20%;
+  top: 8%;
+  left: 8%;
+}
+.mypets .content .right {
+  position: fixed;
+  left: 50%;
+  width: 45%;
+  top: 20vh;
+}
+.mypets .content .right img {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+}
+
+footer {
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  height: 30vh;
+  background-color: #fffaf7;
+  border-top: solid #eb651c 1px;
+  position: relative;
+  bottom: 0;
+  margin-top: 10vh;
+}
+footer .reseaux {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+footer .reseaux h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  margin-bottom: 5vh;
+}
+footer .reseaux .logos {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+}
+footer .reseaux .logos a {
+  color: #222222;
+}
+footer .reseaux .logos ion-icon {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */

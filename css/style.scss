@@ -1,0 +1,1152 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300;500;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto",sans-serif;
+  color: color(noir);
+}
+
+$colors :(
+  noir:#222222,
+  primary: #eb651c, 
+  beige: #fdf3ed, 
+  header: #fffaf7, 
+);
+
+$border-height : 1px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+}
+
+body {
+  background-color: color(beige);
+  position: relative;
+  height: 100%;
+}
+
+// * ---------------------------HEADER---------------------------
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: color(header);
+  border-bottom: solid $border-height color(noir);
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+    .logo {
+      display: flex;
+      width: 10%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 40%;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      width: 55%;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        width: 35%;
+
+        img {
+          width: 10%;
+          margin-right: 15px;
+        }
+        
+        a {
+          color: color(noir);
+          text-decoration: none;
+          font-weight: 500;
+          text-transform: capitalize;
+          width: 80%;
+        }
+
+        ion-icon {
+          width: 100%;
+        }
+      }
+
+      li:nth-child(2){
+        margin-right: -10%;
+      }
+
+      li:nth-child(3){
+        margin-right: -15%;
+        cursor: default;
+
+        a {
+          color: color(header);
+        }
+
+        img {
+          display: none;
+        }
+      }
+
+      li:nth-child(4){
+        margin-right: -5%;
+        cursor: default;
+
+        a {
+          color: color(header);
+        }
+
+        ion-icon {
+          color: color(header);
+        }
+      }
+    }
+
+    .perso {
+      display: flex;
+      flex-direction: row;
+      width: 20%;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+
+      a {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: color(noir);
+        text-decoration: none;
+
+        ion-icon {
+          color: color(noir);
+          width: 25px;
+          height: 25px;
+        }
+        
+        .search {
+          padding-left: 15px;
+          border-left: color(primary) $border-height solid;
+        }
+      }
+    }
+  }
+}
+
+// * ---------------------------HEADER---------------------------
+// TODO --------------------------INFOS--------------------------
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  background-color: #eb9118;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: -10vh;
+  z-index: 9;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    width: 43%;
+    justify-content: space-between;
+    font-weight: 300;
+
+    ion-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+// TODO --------------------------INFOS--------------------------
+// ! ---------------------------LOGIN---------------------------
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10vh;
+  background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2022/09/SPA_ASTRO_CHIEN_11_VERSEAU_BANDEAU_SITE_1366x483.png");
+  background-repeat: none;
+  background-size: cover;
+  height: 60vh;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 100;
+    width: 30%;
+    margin: auto 0;
+    margin-left: 15vh;
+    justify-content: space-around;
+    height: 50%;
+
+    h1 {
+      font-size: 58px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.formulaire {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 10vh;
+
+  .haut {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85%;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center;
+      position: relative;
+
+      .content {
+        width: 80%;
+        margin: auto;
+
+        h2 {
+          font-family: 'Amatic SC', cursive;
+          font-size: 50px;
+          line-height: 70px;
+        }
+
+        p {
+          font-weight: 100;
+          font-size: 20px;
+          width: 80%;
+        }
+      }
+
+      img {
+        width: 30%;
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-30deg);
+        top: 15%;
+        left: 0;
+        opacity: 20%;
+      }
+    }
+
+    .right {
+      width: 50%;
+      position: relative;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .fond {
+        width: 110%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../images/blob.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        transform: rotateY(180deg);
+      }
+
+      form {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        justify-content: space-around;
+        width: 80%;
+
+        h1 {
+          margin-bottom: 5vh;
+          font-size: 50px;
+        }
+
+        input {
+          border: $border-height color(noir) solid;
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+          background-color: transparent;
+          font-weight: 100;
+          font-size: 20px;
+        }
+
+        input[type="submit"]{
+          width: 30%;
+          background-color: color(primary);
+          color: #fff;
+          border: none;
+          font-family: 'Amatic SC', cursive;
+          font-size: 25px;
+          letter-spacing: 5px;
+          font-weight: bold;
+        }
+
+        input::placeholder {
+          color: rgb(123, 123, 123);
+        }
+      }
+    }
+  }
+
+  .bas {
+    width: 100%;
+    display: flex;
+
+    h3 {
+      font-family: 'Amatic SC', cursive;
+      font-size: 40px;
+      margin: auto;
+      width: 20%;
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/10/Djoko_Mylene_Chat.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110vh;
+  margin-bottom: -10vh;
+
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    margin: auto;
+    justify-content: space-around;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      height: 80%;
+      color: #fff;
+      justify-content: space-around;
+      margin-left: 10vh;
+
+      h2 {
+        font-family: 'Amatic SC', cursive;
+        font-size: 68px;
+      }
+
+      p {
+        font-weight: 100;
+        font-size: 20px;
+        width: 80%;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+    }
+  }
+}
+
+.donation {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 9;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    background-color: color(primary);
+    border: none;
+    border-radius: 40px;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: center;
+
+    img {
+      width: 20%;
+      margin-right: 2vh;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+  }
+}
+
+// ! ---------------------------LOGIN---------------------------
+// ? ---------------------------ADMIN---------------------------
+
+.admin {
+  margin-top: 15vh;
+  width: 100%;
+  background-color: #fdf3ed;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    min-height: 40vh;
+    position: relative;
+
+    .left {
+      width: 50%;
+
+      .card {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        width: 90%;
+        margin-top: 5vh;
+        border: $border-height solid color(noir);
+        border-radius: 20px;
+        position: relative;
+        min-height: 20vh;
+        background-color: color(header);
+
+        .txt {
+          width: 70%;
+
+          h4 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 30px;
+            margin-bottom: 2vh;
+          }
+        
+          a {
+            color: color(noir);
+          }
+        
+          p {
+            font-size: 20px;
+            font-weight: 100;
+            margin-top: 2vh;
+          }
+        }
+
+        .fond {
+          width: 30%;
+
+          img {
+            position: absolute;
+            width: 15%;
+            transform: rotate(30deg);
+            opacity: 20%;
+            top: 8%;
+            left: 35%;
+          }
+        }
+      }
+    }
+
+    .right {
+      position: fixed;
+      left: 50%;
+      width: 50%;
+
+      img {
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.adm {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  left: 2%;
+  bottom: 5%;
+  z-index: 9;
+
+  .content {
+    background-color: color(primary);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 40px;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    justify-content: space-around;
+    width: 15vh;
+    color: #fff;
+    left: 2%;
+    bottom: 5%;
+    z-index: 9;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.dpt {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  width: 15vh;
+  color: #fff;
+  right: 10%;
+  bottom: 10%;
+  z-index: 9;
+
+  .content {
+    background-color: color(primary);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 40px;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    justify-content: space-around;
+    width: 15vh;
+    color: #fff;
+    left: 12%;
+    bottom: 5%;
+    z-index: 9;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+// ? ---------------------------ADMIN---------------------------
+// * ---------------------------ACCOUNT---------------------------
+
+.account {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bandeau {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    margin-top: 10vh;
+    justify-content: space-around;
+    text-align: center;
+    background-color: color(header);
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
+      height: 80%;
+      margin: auto;
+
+      .txt {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font-family: 'Amatic SC', cursive;
+          font-size: 50px;
+        }
+
+        p {
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 1.69;
+          letter-spacing: 1.95px;
+          text-transform: uppercase;
+        }
+      }
+
+      img {
+        width: 30%;
+      }
+    }
+
+    section:nth-child(4){
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  .bas {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    margin-top: 20vh;
+    margin-bottom: -15vh;
+    height: 90vh;
+  
+    .left {
+      width: 45%;
+      height: 100%;
+      position: relative;
+      margin-top: 10vh;
+
+      img {
+        width: 30%;
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-30deg);
+        top: 0%;
+        left: 0%;
+        opacity: 20%;
+      }
+
+      .txt {
+        width: 80%;
+        margin: auto;
+        height: 80%;
+        justify-content: space-around;
+
+        h4 {
+          font-family: 'Amatic SC', cursive;
+          font-size: 50px;
+          line-height: 70px;
+        }
+
+        p {
+          margin-top: 5vh;
+          font-weight: 100;
+          font-size: 20px;
+          width: 80%;
+        }
+      }
+
+    }
+ 
+    .right {
+      width: 50%;
+      margin: auto;
+      position: relative;
+      height: 100%;
+
+      .fond {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../images/blob.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotateY(180deg);
+        z-index: -1;
+        top: -10%;
+      }
+
+      form { 
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-around;
+        width: 80%;
+        margin-top: 10vh;
+  
+        h1 {
+          margin-bottom: 5vh;
+          font-size: 50px;
+        }
+  
+        input {
+          border: $border-height color(noir) solid;
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+          background-color: transparent;
+          font-weight: 100;
+          font-size: 20px;
+        }
+  
+        input[type="submit"]{
+          width: 40%;
+          background-color: color(primary);
+          color: #fff;
+          border: none;
+          font-family: 'Amatic SC', cursive;
+          font-size: 25px;
+          letter-spacing: 5px;
+          font-weight: bold;
+        }
+  
+        input::placeholder {
+          color: rgb(123, 123, 123);
+        }
+      }
+    }
+  }
+
+  .deux {
+    margin-top: 20vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://boutique-solidaire.com/la-spa/themes/SPA/img/Block-Home-Cadon.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// * ---------------------------ACCOUNT---------------------------
+// ! ---------------------------CONNECT---------------------------
+  
+.connect {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin: auto;
+    margin-top: 15vh;
+
+    .haut {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      margin-top: 10vh;
+
+      .left {
+        width: 50%;
+        margin: auto;
+        position: relative;
+        height: 100%;
+  
+        .fond {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-image: url(../images/blob.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: -1;
+          top: -10%;
+        }
+  
+        form { 
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          height: 50%;
+          justify-content: space-around;
+          width: 80%;
+          margin-top: 10vh;
+    
+          h1 {
+            margin-bottom: 5vh;
+            font-size: 50px;
+          }
+    
+          input {
+            border: $border-height color(noir) solid;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background-color: transparent;
+            font-weight: 100;
+            font-size: 20px;
+          }
+    
+          input[type="submit"]{
+            width: 40%;
+            background-color: color(primary);
+            color: #fff;
+            border: none;
+            font-family: 'Amatic SC', cursive;
+            font-size: 25px;
+            letter-spacing: 5px;
+            font-weight: bold;
+          }
+    
+          input::placeholder {
+            color: rgb(123, 123, 123);
+          }
+        }
+      }
+  
+      .right {
+        width: 45%;
+        height: 100%;
+
+        img {
+          width: 20%;
+          position: absolute;
+          z-index: -1;
+          transform: rotate(30deg);
+          top: 8%;
+          right: 5%;
+          opacity: 20%;
+        }
+
+        .txt {
+          width: 80%;
+          margin: auto;
+          height: 80%;
+          justify-content: space-around;
+  
+          h4 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 50px;
+            line-height: 70px;
+          }
+  
+          p {
+            margin-top: 5vh;
+            font-weight: 100;
+            font-size: 20px;
+            width: 80%;
+          }
+        }
+  
+      }
+    }
+
+  }
+}
+
+.sous {
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/cat_g.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+
+    .left{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      img {
+        width: 30%;
+        position: absolute;
+        opacity: 20%;
+        transform: rotate(-30deg);
+        top: -5vh;
+        left: -5vh;
+      }
+      
+      .txt {
+        width: 80%;
+        margin: auto;
+        margin-top: -5%;
+
+        h2 {
+          font-family: 'Amatic SC', cursive;
+          font-size: 50px;
+          line-height: 70px;
+        }
+  
+        p {
+          margin-top: 5vh;
+          font-weight: 100;
+          font-size: 20px;
+          width: 80%;
+        }
+      
+      }
+    }
+  }
+}
+
+// ! ---------------------------CONNECT---------------------------
+// ? ---------------------------MYPETS---------------------------
+
+.mypets {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  width: 100%;
+  background-color: #fdf3ed;
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    width: 40%;
+    margin-top: 5vh;
+    border: $border-height solid color(noir);
+    border-radius: 20px;
+    position: relative;
+    min-height: 20vh;
+    background-color: color(header);
+    margin-left: 10vh;
+
+    .txt {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-family: 'Amatic SC', cursive;
+        font-size: 30px;
+      }
+    
+      a {
+        color: color(noir);
+      }
+    
+      p {
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+
+    .fond {
+      width: 30%;
+
+      img {
+        position: absolute;
+        width: 15%;
+        transform: rotate(30deg);
+        opacity: 20%;
+        top: 8%;
+        left: 8%;
+      }
+    }
+  }
+
+  .right {
+    position: fixed;
+    left: 50%;
+    width: 45%;
+    top: 20vh;
+
+    img {
+      position: absolute;
+      width: 90%;
+      bottom: 0;
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+
+    .left {
+      position: relative;
+      width: 45%;
+      left: 10vh;
+
+      .card {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        width: 60%;
+        margin-top: 5vh;
+        border: $border-height solid color(noir);
+        border-radius: 20px;
+        position: relative;
+        min-height: 20vh;
+        background-color: color(header);
+
+        .txt {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 30px;
+          }
+        
+          a {
+            color: color(noir);
+          }
+        
+          p {
+            font-size: 20px;
+            font-weight: 100;
+          }
+        }
+
+        .fond {
+          width: 30%;
+
+          img {
+            position: absolute;
+            width: 15%;
+            transform: rotate(30deg);
+            opacity: 20%;
+            top: 8%;
+            left: 8%;
+          }
+        }
+      }
+    }
+
+    .right {
+      position: fixed;
+      left: 50%;
+      width: 45%;
+      top: 20vh;
+
+      img {
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+// ? ---------------------------MYPETS---------------------------
+// TODO --------------------------FOOTER--------------------------
+
+footer {
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  height: 30vh;
+  background-color: color(header);
+  border-top: solid color(primary) $border-height;
+  position: relative;
+  bottom: 0;
+  margin-top: 10vh;
+
+  .reseaux {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-family: 'Amatic SC', cursive;
+      font-size: 50px;
+      margin-bottom: 5vh;
+    }
+
+    .logos {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      justify-content: space-between;
+
+      a {
+        color: color(noir);
+      }
+
+      ion-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+// TODO --------------------------FOOTER--------------------------
